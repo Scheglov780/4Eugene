@@ -1,0 +1,128 @@
+/** СТИЛИ ДЛЯ БЛОГА АДМИНКИ **/
+.blogGalerey-title > a {
+  font-size: 120%;
+  padding: 5px;
+  background-color: #7E7F7F;
+  color: #FBFBFB;
+  display: block;
+  position: relative;
+  top: 10px;
+}
+.blogGallery-text {
+  display: block;
+  position: relative;
+  padding-top: 15px;
+  text-align: left;
+}
+
+.blogGalerey-info {
+  font-size: 75%;
+  padding: 5px;
+  #background-color: #7E7F7F;
+  #color: #FBFBFB;
+  display: block;
+  position: relative;
+  top: 10px;
+}
+.blogGalerey-info > a {
+  #color: #FBFBFB;
+}
+.blogGalerey-info > a:hover {
+  #color: #3BB3C2;
+}
+.blogGalerey-commentCount {
+  display: block;
+  position: relative;
+  color: #3BB3C2;
+  top: 10px;
+  padding: 10px;
+  border-top: #7e7e7e !important;
+  border-bottom: #7e7e7e !important;
+  border-left: #FBFBFB;
+  border-right: #FBFBFB;
+  border-style: double !important;
+}
+.blog-categories-btn {
+  display: block;
+  position: relative;
+  float: right;
+  padding-bottom: 5px;
+}
+.blog-categories-btn a {
+  border: 1px solid #7e7e7e !important;
+}
+.blogPost-view > h2 {
+  display: block;
+  position: relative;
+  text-align: center;
+  width: 75%;
+}
+a.tag-item {
+  padding: 5px;
+  border-radius: 3px;
+  background-color: #CDCDCD;
+  left: 3px;
+  position: relative;
+}
+.blogPost-title > a {
+  display: block;
+  position: relative;
+  padding: 1px;
+  background-color: #CDCDCD;
+  float: rleft;
+  width: 89%;
+}
+.blogPost-prop {
+  display: block;
+  position: relative;
+  float: right;
+  right: 0px;
+  background-color: #CDCDCD;
+  padding: 5px;
+  top: -20px;
+}
+.blogPost-author {
+  display: block;
+  position: relative;
+  font-size: 70%;
+}
+
+div.blogPost-image img {
+  display: block;
+  position: relative;
+  float: left;
+  top: -30px;
+}
+.blogPost-text {
+  position: relative;
+  width: 80%;
+  left: 5px;
+  padding-bottom: 10px;
+}
+.blogPost-text img{
+  display: block;
+  position: relative;
+  left: auto;
+  right: auto;
+}
+.post-update-modal-header {
+  display: block;
+  position: relative;
+  padding: 5px;
+}
+.ext-edit > label {
+  display: none;
+}
+/* изменим ширину у INPUT - ов
+#blog-posts-create-form input {
+  width: 45%;
+}
+*/
+.rating-block {
+  display: inline-block;
+  position: relative;
+  float: right;
+  top: 2px;
+}
+
+/** /END : СТИЛИ ДЛЯ БЛОГА **/

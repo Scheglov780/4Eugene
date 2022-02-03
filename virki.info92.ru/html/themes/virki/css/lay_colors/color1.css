@@ -1,0 +1,379 @@
+colorProfileZZ {
+  color: #1b2c3e;
+  color: #2c3e50;
+  color: #3a4b5b; /* #303030; */
+  color: #3d3d3d; /* #303030; */
+  color: #4e4e4e;
+  color: #8a8a8a; /* #858585; */
+  color: #394a5c; /* #303030; */
+  color: #979da4; /* #858585; */
+  color: #010101;
+  color: #171717; /* #171717; */
+  color: #172737; /* #171717 */
+  color: #222222; /* #303030; */
+  color: #253443; /* #303030; */
+  color: #272727; /* #303030; */
+  color: #303030; /* #303030; */
+  color: #333333; /* #303030; */
+  color: #393939; /* #303030; */
+  color: #797979; /* #858585; */
+  color: #848484; /* #858585; */
+  color: #858585; /* #858585; */
+  color: #898989; /* #858585; */
+  color: #939393; /* #858585; */
+  color: #979797; /* #858585; */
+  color: #000000;
+  color: #acacac; /* #c7c7c7; */
+  color: #c7c7c7; /* #c7c7c7; */
+  color: #c7cdd4; /* #c7c7c7; */
+  color: #f1f1f1; /* #eeeeee; */
+  color: #f6f6f6; /* #eeeeee; */
+  color: #f0f0f0; /* #eeeeee; */
+  color: #ffffff;
+  color: #a9a7a2; /* #c7c7c7; */
+  color: #a9c165; /* #a4d681; */
+  color: #dddddd; /* #eeeeee; */
+  color: #dfdfdf; /* #eeeeee; */
+  color: #e6e6e6; /* #eeeeee; */
+  color: #e6fcd7; /* #eeeeee; */
+}
+
+/*================================================================*/
+/* preset.css */
+.danvitBtn.bgwhite,
+.errorIn h2,
+.fillterNav li,
+.fwaIn h2,
+.meta a:hover,
+.projectSininTitle,
+.recPostTitle,
+.sbblogTit,
+.sbrm,
+.singleProCaro .carousel-control,
+.teamTitle,
+h1, h2, h3, h4, h5, h6 {
+  color: #000000;
+}
+
+.blogReadmore,
+.blogReadmore:hover,
+.commonHeadding h2,
+.commonHeadding p,
+.commonHeadding ul, .commonHeadding ol,
+.copyright a,
+.danvitBtn,
+.danvitBtn.bgwhite:hover,
+.danvitBtn:hover,
+.footerSocial a:hover,
+.fotterTitle,
+.headMiddBtn a,
+.mainnav ul li a, .mainnav ul li i,
+.mainnav ul ul.sub-menu li a,
+.newsletter button,
+.projectHover a,
+.search button,
+.searchForm button,
+.searchForm input,
+.showit i,
+.singleProCaro .carousel-control i,
+.tp-leftarrow.default.round:before,
+.tp-rightarrow.default.round:after {
+  color: #ffffff;
+}
+
+.commonHeadding.black h2,
+.commonSectionTitle h2,
+.headerTop p,
+.topSec span,
+.singin i,
+.singMiddInfo h4,
+.headMiddBtn a:hover,
+.breadCumpNav a,
+.abTitle,
+.abTitle2,
+.servicesNav li a,
+.downloadTitle,
+.errorIn h1 {
+  color: #2c3e50;
+}
+
+.blogReadmore:hover,
+.danvitBtn.bgwhite:hover,
+.danvitBtn:hover,
+.newsletter button,
+.newsletter input,
+.showit:hover {
+  background-color: #303030;
+}
+
+.danvitBtn.bgwhite,
+.mobileMenu span,
+.preloader,
+.singleBlog,
+.singleTest,
+.singleWedowra {
+  background-color: #ffffff;
+}
+
+.bggray,
+.fullwidthAuthor,
+.headerTop,
+.search input,
+.servicesNav {
+  background-color: #eeeeee;
+}
+
+/* style.css */
+
+.blogDetailsDec p,
+.copyright p,
+.downloadpdflink a,
+.errorIn p,
+.fwaIn p,
+.navigation > li:before,
+.sbCont p,
+.servicesCont p,
+.siBlogThumb p,
+.singin i.fa.fa-caret-down,
+.singleContadds a,
+.singleContadds.phone p span,
+.singleTest p,
+.singleWedo p,
+.topSec a {
+  color: #a7a7a7;
+}
+
+.servicesDetailsCont p {
+  color: #575757;
+}
+
+.commentForm input,
+.search input {
+  color: #474747;
+}
+
+.singMiddInfo a,
+.singMiddInfo p {
+  color: #171717;
+}
+
+.singleComment p {
+  color: #474747;
+}
+
+.blogMeta a,
+.blogMeta,
+.footer p,
+.footer a,
+.fwaSocial a,
+.meta a,
+.projectDetais p,
+.projectSingleText p,
+.shareSocial a,
+.socialShare p,
+.testDeg p {
+  color: #eeeeee;
+}
+
+.searchForm input:-moz-placeholder,
+.searchForm input:-ms-input-placeholder,
+.searchForm input::-webkit-input-placeholder {
+  color: #eeeeee;
+}
+
+.blogDetailsDec blockquote p,
+.projectSingleInfo ul li span,
+.search button:hover,
+.shareSocial span,
+.singleContadds.phone p,
+.teamDeg,
+.widgetList li a {
+  color: #303030;
+}
+
+.comdate,
+.commentTitle,
+.comreplay {
+  color: #1b2c3e;
+}
+
+.singMiddInfo i,
+.singMiddInfo i::after {
+  border-color: #dcdcdc;
+}
+
+.projectHover a {
+  border-color: #ffffff;
+}
+
+.blogSec2,
+.commentForm input,
+.commentForm textarea,
+.singleServices,
+.socialLink a {
+  border-color: #eeeeee;
+}
+
+.testDeg h2 {
+  color: #010101;
+}
+
+.sbrm:before,
+.servicRead::after {
+  background-color: #000000;
+}
+
+.singleProCaro .carousel-control {
+  background-color: #c7c7c7;
+}
+
+.singleClient {
+  border-color: #e0e0e0;
+}
+
+.socialShare {
+  border-top-color: #eeeeee;
+}
+
+.mainnav ul ul.sub-menu li,
+.mainnav ul ul.sub-menu li.divider {
+  border-bottom-color: #303030;
+}
+
+.servicesNav li,
+.projectSingleInfo ul li,
+.singleComment,
+.socialShare,
+.widgetList li {
+  border-bottom-color: #eeeeee;
+}
+
+.projectImg:after {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.breadcrumbSec:before {
+  background: rgba(255, 255, 255, .8);
+}
+
+/*================================================================*/
+#contactForm .reqError,
+.blogMeta a:hover,
+.breadCumpNav a:hover,
+.contactSocial a,
+.copyright a:hover,
+.downloadpdflink a:hover,
+.fillterNav li.active,
+.fillterNav li:hover,
+.fwaSocial a:hover,
+.headerTop p span,
+.mainnav ul li.active a,
+.mainnav ul li:hover > a, .mainnav ul li.active i,
+.mainnav ul li:hover > i,
+.mainnav ul ul.sub-menu li a:hover,
+.navigation > li a:hover,
+.newsletter button:hover,
+.newsletter input.reqError,
+.projectHover a:hover,
+.searchForm button:hover,
+.servicesNav li a:hover,
+.servicesNav li.active a,
+.servicesNav li.active::after, /* Не найдено */
+.servicesNav li.active:after,
+.shareSocial a:hover,
+.singleAdds a:hover,
+.singleAdds i,
+.singleContadds a:hover,
+.singleContadds i,
+.singleProCaro .carousel-control:hover i,
+.singleProCaro .carousel-indicators li.active,
+.singleWedo i,
+.singMiddInfo a:hover,
+.singMiddInfo i,
+.topSec.countryFlug.active a.currentFlg,
+.widgetList li a:hover,
+.widgetList li::after, /* Не найдено */
+.widgetList li:after,
+a:hover {
+  /* color: #ffa60a; */
+  /* color: #a4d681; */
+  color: #a4d681;
+}
+
+.blogReadmore,
+.commonHeadding h2::after,
+.commonSectionTitle h2::after, /* Не найдено */
+.commonSectionTitle h2:after,
+.danvitBtn,
+.flagList li:hover,
+.headMiddBtn a,
+.mobileMenu.active span,
+.sbrm::after, /* Не найдено */
+.sbrm:after,
+.search button,
+.servicRead::before,
+.switchTittle, /* Не найдено */
+.teambg::after,
+.testCaro.owl-theme .owl-dots .owl-dot.active span,
+.testCaro.owl-theme .owl-dots .owl-dot:hover span,
+.testDeg h2::after, /* Не найдено */
+.testDeg h2:after,
+.tparrows.default.round:hover {
+  /* background-color: #ffa60a; */
+  /* background-color: #a4d681; */
+  background-color: #a4d681;
+}
+
+.projectHover a:hover,
+.singleProCaro .carousel-indicators li.active,
+.testCaro.owl-theme .owl-dots .owl-dot span {
+  /* border-color: #ffa60a; */
+  /* border-color: #a4d681; */
+  border-color: #a4d681;
+}
+
+.showit {
+  color: #a4d681;
+  background-color: rgba(164, 214, 129, 0.65);
+}
+
+.overlay85:before {
+  background: rgba(48, 62, 39, 0.85);
+}
+
+.mainnav ul ul.sub-menu,
+.header,
+.servicesNav li a:hover,
+.servicesNav li.active a {
+  background-color: rgba(64, 83, 50, 0.99); /* #2c3e50; */
+}
+
+.searchForm input {
+  background-color: rgba(63, 64, 62, 0.5); /* #303030; */
+}
+
+.footer {
+  background-color: rgb(66, 85, 52); /* #1b2c3e; */
+}
+
+.footerSocial a {
+  background-color: rgb(40, 54, 33); /* #1b2c3e; */
+}
+
+.copyright {
+  background-color: #171717;
+}
+
+.revCont h1 {
+  color: #a4d681;
+}
+
+.revCont h2 {
+  color: #a4d681;
+}
+
+.revCont p {
+  color: #ffffff;
+}
+
+

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Usage example:
+ php index.php config.xml
+-->
+<root>
+    <!-- 
+        <source> - a connection string to your MySql database. 
+        Please ensure, that you have defined your connection string properly.
+        Ensure, that details like 'charset=UTF8' are included in your connection string (if necessary).
+    -->
+    <source>mysql:host=localhost;port=3306;dbname=777;charset=UTF8,root,Q1w2e3r4t5</source>
+    
+    <!-- 
+        <target> - a connection string to your PostgreSql database. 
+        Please ensure, that you have defined your connection string properly.
+        Ensure, that details like options='[double dash]client_encoding=UTF8' are included in your connection string (if necessary).
+    -->
+    <target>pgsql:host=localhost;port=5432;dbname=777;options=--client_encoding=UTF8,root,Q1w2e3r4t5</target>
+    
+    <!-- 
+        <encoding> - PHP encoding type. 
+        If not supplied, then UTF-8 will be used as a default. 
+    -->
+    <encoding>UTF-8</encoding>
+    
+    <!--
+        <schema> - a name of the schema, that will contain all migrated tables.
+        If not supplied, then a new schema will be created automatically.
+    -->
+    <schema>public</schema>
+    
+    <!--
+        During migration each table's data will be split into chunks of <data_chunk_size> (in MB).
+        If not supplied, then 10 MB will be used as a default.
+    -->
+    <data_chunk_size>10</data_chunk_size>
+
+    <!--
+        Flag, that allows to migrate only the data.
+        By default, ti is 0 - entire db-structure + data
+        In order to migrate data only - set 1
+    -->
+    <data_only>0</data_only>
+</root>

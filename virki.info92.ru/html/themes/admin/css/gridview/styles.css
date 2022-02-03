@@ -1,0 +1,107 @@
+/*
+.grid-view-loading {
+	background:url(loading.gif) no-repeat;
+    position: relative;
+    width: 25px;
+    height: 25px;
+}
+.grid-view{
+    padding: 0;
+}
+*/
+.grid-view table.items {
+	background: #ACACAC;
+	border-collapse: collapse;
+	width: 100%;
+	border: 1px #efefef solid;
+}
+
+.grid-view table.items thead {
+	background: #ACACAC;
+	border-collapse: collapse;
+	border: 1px #efefef solid;
+}
+
+.grid-view table.items th, .grid-view table.items td {
+	#border: 2px #f2f2f2 solid;
+	padding: 0.3em;
+    #vertical-align: middle;
+}
+
+@media (min-width: 768px) {
+	.grid-view table.items th, .grid-view table.items td {
+		font-size: 0.9em;
+	}
+}
+
+.grid-view table.items th, .grid-view table.items th a {
+    text-decoration: none;
+    color: #000000;
+    font: normal 1em 'Roboto Condensed','Arial';
+	text-align: center;
+    vertical-align: middle;
+}
+.grid-view table.items th a:hover {
+	color: #000000;
+}
+
+.grid-view table.items tbody tr{
+	background: #f9f9f9;
+}
+.grid-view table.items tbody tr.even{
+	background: #f9f9f9;
+}
+.grid-view table.items tbody tr.odd{
+	background: #f3f3f3;
+}
+.grid-view table.items tbody tr.selected{
+	background: #d7d7d7;
+}
+.grid-view table.items tbody tr:hover.selected{
+	background: #d7d7d7;
+}
+.grid-view table.items tbody tr:hover{
+	background: #d3d3d3;
+}
+
+
+.grid-view .link-column img{
+	border: 0;
+}
+.grid-view .button-column{
+	text-align: center;
+	width: 60px;
+}
+.grid-view .button-column img{
+	border: 0;
+}
+.grid-view .checkbox-column {
+	width: 15px;
+}
+.grid-view .summary {
+    margin: 6px 0px 4px 0;
+	text-align: left;
+    /* font: 13px "roboto condensed", "Helvetica", "Arial", sans-serif; */
+    text-shadow: 1px 1px 1px #ffffff;
+    text-transform: uppercase;
+    background: #ededed;
+    padding: 5px 0 5px 10px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    width: 100%
+}
+.grid-view .pager{
+	margin: 5px 0 0 0;
+	text-align: left;
+}
+.grid-view .empty{
+	font-style: italic;
+}
+.grid-view .filters input,.grid-view .filters select {
+	width: 95%;
+	border: 1px solid #ccc;
+}
+.summaryPager .pagination {
+	margin: 4px 0px 2px 0;
+}

@@ -1,0 +1,150 @@
+<IfModule mod_charset.c>
+  CharsetDisable On
+</IfModule>
+AddDefaultCharset UTF-8
+
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE application/javascript
+  AddOutputFilterByType DEFLATE application/json
+  AddOutputFilterByType DEFLATE text/javascript
+  AddOutputFilterByType DEFLATE text/css
+  AddOutputFilterByType DEFLATE text/html
+  AddOutputFilterByType DEFLATE text/plain
+  AddOutputFilterByType DEFLATE application/font-woff
+  AddOutputFilterByType DEFLATE font/woff
+# webfonts and svg:
+  <FilesMatch "\.(ttf|otf|eot|svg|woff)$" >
+    SetOutputFilter DEFLATE
+  </FilesMatch>
+<files *.woff>
+SetOutputFilter DEFLATE
+</files>
+   <IfModule mod_setenvif.c>
+     BrowserMatch ^Mozilla/4 gzip-only-text/html
+     BrowserMatch ^Mozilla/4\.0[678] no-gzip
+     BrowserMatch \bMSIE !no-gzip !gzip-only-text/html
+   </IfModule>
+</IfModule>
+
+<IfModule mod_headers.c>
+<FilesMatch "\.(gif|jpg|jpeg|png|ico)$">
+  Header unset Pragma
+#  RequestHeader unset Cookie
+#  Header unset Cookie
+#  Header unset Set-Cookie
+  Header append Cache-Control "public"
+</FilesMatch>
+
+<FilesMatch "\.(css|js|htm|html)$">
+	Header append Cache-Control "public"
+    Header unset ETag
+    FileETag None
+</FilesMatch>
+
+<FilesMatch "\.(php)$">
+	Header append Cache-Control "private"
+</FilesMatch>
+
+<FilesMatch "\/site\/error$">
+	Header append Cache-Control "private"
+</FilesMatch>  
+</IfModule>
+
+<ifModule mod_expires.c>
+# Разрешить истечение срока.
+  ExpiresActive On
+ ExpiresDefault "access plus 3 months"
+  ExpiresByType image/vnd.microsoft.icon "access plus 3 months"
+  ExpiresByType image/gif "access plus 3 months"
+  ExpiresByType image/png "access plus 3 months"
+  ExpiresByType image/jpeg "access plus 3 months"
+  ExpiresByType text/css "access plus 3 months"
+#  ExpiresByType text/plain "access plus 3 months"
+  ExpiresByType application/javascript "access plus 3 months"
+  ExpiresByType text/javascript "access plus 3 months"
+# веб-шрифты
+  ExpiresByType font/truetype             "access plus 3 months"
+  ExpiresByType font/opentype             "access plus 3 months"
+  ExpiresByType font/woff                 "access plus 3 months"  
+<Filesmatch "\.(php)$">
+  ExpiresActive Off
+</Filesmatch>  
+</ifModule>
+
+RewriteEngine on
+RewriteBase /
+# Uncomment if new https SSL site uses old payments confirmation links
+#!RewriteCond %{HTTPS} =on
+#!RewriteCond %{THE_REQUEST} .+?\/(?:payresult|paysuccess|payfail)\/.+ [NC]
+#!RewriteRule (.*) http://%{HTTP_HOST}%{REQUEST_URI} [QSA,L]
+
+# For exchange with 1C
+RewriteCond %{THE_REQUEST} (^|/)([a-z]{2}/)*api/ex1c(\?.*)* [NC]
+RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+
+RewriteCond %{THE_REQUEST} !(^|/)([a-z]{2}/)*api/ex1c(\?.*)* [NC]
+
+RewriteCond %{HTTPS} !=on
+# Uncomment if new https SSL site uses old payments confirmation links
+# RewriteCond %{THE_REQUEST} !.+?\/(?:payresult|paysuccess|payfail)\/.+ [NC]
+RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [QSA,L]
+
+RewriteCond %{HTTP_HOST} !^((www|img\d|item\d|data)\.)*(virki\.info92\.ru|virki\-2\.spb\.ru|xn\-\-\-2\-dlcyal5b\.xn\-\-90a1af\.xn\-\-p1acf) [NC]
+RewriteRule .* - [F]
+
+RewriteCond %{HTTP_HOST} (www\.virki\.info92\.ru|virki\.info92\.ru|xn\-\-\-2\-dlcyal5b\.xn\-\-90a1af\.xn\-\-p1acf|www\.xn\-\-\-2\-dlcyal5b\.xn\-\-90a1af\.xn\-\-p1acf)
+RewriteRule (.*) https://virki-2.spb.ru/$1 [R=301,L]
+
+# Enebling coustom HTTP headers
+# RewriteRule .? - [E=X-Preloading-Time:%{HTTP:X-Preloading-Time}]
+
+#RewriteCond %{HTTPS} =off
+#RewriteCond %{REQUEST_URI} \/(cabinet(?!/favorite/add)|user|login)($|\/)
+#RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [QSA,L]
+
+RewriteCond %{HTTP_HOST} ^www\.(.*) [NC]
+#RewriteRule ^(.*)$ http://%1/$1 [R=301,L]
+RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^data\.(.+) [NC]
+RewriteCond %{THE_REQUEST} !(^|/)([a-z]{2}/)*(((admin|cabinet)/)|(item/(\d+|itemComments|sellerrelatedblock|detail))|(seller/sellerInfo)|(category/menu).*) [NC]
+#RewriteRule ^(.*)$ http://%1/$1 [R=301,L]
+RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^item\d\.(.+) [NC]
+RewriteCond %{THE_REQUEST} !(^|/)([a-z]{2}/)*((item/\d+).*) [NC]
+RewriteCond %{REQUEST_METHOD} GET
+#RewriteCond %{HTTP:X-Requested-With} !=XMLHttpRequest [NC]
+#RewriteRule ^(.*)$ http://%1/$1 [R=301,L]
+RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^img\d\.(.+) [NC]
+RewriteCond %{THE_REQUEST} !(^|/)([a-z]{2}/)*(img/index/url/[0-9a-f]{32}\.[jpg|jpeg|png|gif|ico]|images/brands/.+|assets/images.cache/.+|.+/images/library/.+) [NC]
+#RewriteRule ^(.*)$ http://%1/$1 [R=301,L]
+RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^(img\d\..+) [NC]
+RewriteRule ^(az|sq|am|en|ar|hy|af|eu|ba|be|bn|my|bg|bs|cy|hu|vi|ht|gl|nl|el|ka|gu|da|he|yi|id|ga|it|is|es|kk|kn|ca|ky|zh|ko|xh|km|lo|la|lv|lt|lb|mg|ms|ml|mt|mk|mi|mr|mn|de|ne|no|pa|fa|pl|pt|ro|ru|sr|si|sk|sl|sw|su|tg|th|tl|ta|tt|te|tr|uz|uk|ur|fi|fr|hi|hr|cs|sv|gd|et|eo|jv|ja)/(.*)$ http://%1/$2 [R=301,L]
+
+RewriteCond %{REQUEST_URI} .*/item/images/.* [NC]
+RewriteRule .* - [F]
+
+RewriteCond %{REQUEST_URI} .*_dataProvider_page/\d{4}$ [NC]
+RewriteRule .* - [F]
+
+RewriteCond %{REQUEST_URI} .*(?:[\/]|^)(?:(?:wp[_\-/])|(?:ws_ftp)|(?:(phpMyAdmin|pma|wordpress|xmlrpc)(?:[\/\.]|$))).* [NC]
+RewriteRule .* - [F]
+
+
+RewriteCond %{REQUEST_URI} ^/(az|sq|am|en|ar|hy|af|eu|ba|be|bn|my|bg|bs|cy|hu|vi|ht|gl|nl|el|ka|gu|da|he|yi|id|ga|it|is|es|kk|kn|ca|ky|zh|ko|xh|km|lo|la|lv|lt|lb|mg|ms|ml|mt|mk|mi|mr|mn|de|ne|no|pa|fa|pl|pt|ro|ru|sr|si|sk|sl|sw|su|tg|th|tl|ta|tt|te|tr|uz|uk|ur|fi|fr|hi|hr|cs|sv|gd|et|eo|jv|ja)/(server\-status|favicon\.ico)$ [NC]
+RewriteRule .*\/(server\-status|favicon\.ico)$ /$1 [R=301,L]
+
+#if a directory or a file exists, use it directly
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+# otherwise forward it to index.php
+RewriteCond %{REQUEST_URI} !=/server-status
+RewriteCond %{REQUEST_URI} !=/favicon.ico
+RewriteRule . /index.php [L]
+
+ErrorDocument 500 /site/error

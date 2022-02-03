@@ -1,0 +1,7 @@
+User-agent: *
+Host: virki-2.spb.ru
+Disallow: /dbadmin/
+Disallow: /searchByImage
+Disallow: /admin/
+Disallow: /user/
+Disallow: /setlang/

@@ -1,0 +1,226 @@
+/*
+  Theme Name: Virki2 HTML Template
+  Version: 1.0.0
+*/
+/*=======================================================================
+[Table of contents]
+=========================================================================
+1. Fonts
+2. Normalization
+3. Section setup
+4. Margin and padding setup
+==========================================================================*/
+/*=======================================================================
+// Fonts
+=========================================================================*/
+@import "../fonts/lato/stylesheet.css";
+
+/* Normalization */
+html, body {
+  color: #4e4e4e;
+  font-family: "LatoWeb", sans-serif;
+  font-size: 24px;
+  /*font-weight: 400;*/
+  line-height: 28px;
+}
+
+a {
+  color: #222222;
+  transition: all ease 500ms;
+  -moz-transition: all ease 500ms;
+  -webkit-transition: all ease 500ms;
+  -ms-transition: all ease 500ms;
+  -o-transition: all ease 500ms;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #ffa60a;
+}
+
+a:focus {
+  outline: 0;
+  text-decoration: none;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+button {
+  border: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  color: #000000;
+  line-height: 1.0;
+  font-family: "MuseoCyrl-700", "Arial", serif;
+  margin: 0;
+}
+
+/*=======================================================================
+//  Margin and padding setup
+=========================================================================*/
+.noPadding {
+  padding: 0px;
+}
+
+.noPaddingBottom {
+  padding-bottom: 0px !important;
+}
+
+.noPaddingLeft {
+  padding-left: 0px !important;
+}
+
+.noPaddingRight {
+  padding-right: 0px !important;
+}
+
+.noMarginBottom {
+  margin-bottom: 0px !important;
+}
+
+.noMarginRight {
+  margin-right: 0px !important;
+}
+
+.noPaddingTop {
+  padding-top: 0px !important;
+}
+
+/*=======================================================================
+// danvit Button
+=========================================================================*/
+.danvitBtn {
+  background: #ffa60a;
+/*  color: #ffffff; */
+  font-size: 24px;
+  text-transform: capitalize;
+}
+
+.danvitBtn:hover {
+  color: #ffffff;
+  background: #333333;
+}
+
+.danvitBtn.bgwhite {
+  background: #ffffff;
+  color: #000000;
+}
+
+.danvitBtn.bgwhite:hover {
+  background: #333333;
+  color: #ffffff;
+}
+
+/*=======================================================================
+// Section SetUp
+=========================================================================*/
+.commonSection {
+  padding: 40px 0;
+  position: relative;
+}
+
+.bggray {
+  background: #f0f0f0;
+}
+
+.overlay85:before {
+  background: rgba(44, 62, 80, .85);
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  content: '';
+  width: 100%;
+  height: 100%;
+}
+
+.commonHeadding {
+}
+
+.commonHeadding h2 {
+  font-size: 24px;
+  line-height: 1.0;
+  color: #ffffff;
+  margin-bottom: 45px;
+  position: relative;
+}
+
+.commonHeadding.black h2 {
+  color: #2c3e50;
+}
+
+.commonHeadding h2::after {
+  display: none;
+  background: #ffa60a;
+  content: "";
+  height: 2px;
+  position: absolute;
+  width: 60px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  top: 64px;
+}
+
+.commonHeadding p {
+  font-family: "gostA200l";
+  font-size: 24px;
+  line-height: 28px;
+  color: #ffffff;
+}
+
+.commonHeadding ul, .commonHeadding ol {
+  font-family: "gostA200l";
+  font-size: 24px;
+  line-height: 28px;
+  color: #ffffff;
+  list-style: initial;
+  margin: 0 0 10px 35px;
+
+}
+
+.commonSectionTitle {
+  margin-bottom: 60px;
+}
+
+.commonSectionTitle h2 {
+  font-size: 24px;
+  color: #2c3e50;
+  position: relative;
+  padding-bottom: 25px;
+}
+
+.commonSectionTitle h2:after {
+  width: 60px;
+  height: 2px;
+  background: #ffa60a;
+  content: '';
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  position: absolute;
+}
+
+.commonSectionTitle.two {
+  margin-bottom: 40px;
+}
+
+.vcenter {
+  float: none;
+  display: inline;
+  vertical-align: middle;
+}
+
+.accentTextWithImage {
+  font-size: 20px;
+  line-height: 18px;
+}

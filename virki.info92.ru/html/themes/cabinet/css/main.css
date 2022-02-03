@@ -1,0 +1,304 @@
+@import "../font/SourceSansPro/stylesheet.css";
+
+
+/* horizontal block scrolling */
+.pre-x-scrollable {
+  overflow: auto;
+  -ms-word-wrap: normal;
+  word-wrap: normal;
+  overflow-wrap: normal;
+  white-space: pre;
+}
+
+/*
+.pre-scrollable {
+  min-height: 1001.1px !important;
+}
+ */
+
+.grid-view-history {
+  margin-top: 12px;
+}
+
+.grid-view-history table tbody tr td {
+  border-top: 0px;
+  padding: 0;
+  display: block;
+}
+
+.grid-view-history table tbody tr td li a {
+  padding: 0px 5px 12px 18px;
+  display: block;
+}
+
+.grid-view-history table tbody tr td li a .fa {
+  width: 20px;
+}
+
+@media (min-width: 768px) {
+  td .btn-group {
+    display: inline-flex;
+  }
+}
+
+.ds-ui-tab-button {
+  padding-left: 0.1em !important;
+  padding-right: 0.5em !important;
+}
+
+.showit {
+  background: rgba(34, 45, 50, 0.5);
+  bottom: 58px;
+  color: #ffffff;
+  font-size: 20px;
+  height: 40px;
+  line-height: 0.8;
+  padding: 10px 12px;
+  position: fixed;
+  right: 5px;
+  text-align: center;
+  width: 40px;
+  z-index: 99;
+}
+
+.showit i {
+  color: #ffffff;
+}
+
+.showit:hover {
+  background: #222d32;
+}
+
+
+/* Land list */
+.lands-list {
+  margin: 0;
+  padding: 0;
+  text-align: justify;
+  clear: left;
+  vertical-align: top;
+}
+
+.lands-list .land {
+  /* width: 300px; */
+  margin: 0;
+  display: inline-table;
+  vertical-align: top;
+}
+
+/*
+.lands-list .land .control {
+
+}
+.lands-list .land .land-image {
+  width: 160px;
+  height: 160px;
+  padding: 0;
+  text-align: center;
+  border: 3px none;
+}
+
+.lands-list .land .land-image img {
+  border: none;
+  height: 160px;
+  width: 160px;
+}
+ */
+
+/* Device list */
+.devices-list {
+  margin: 0;
+  padding: 0;
+  text-align: justify;
+  clear: left;
+  vertical-align: top;
+}
+
+.devices-list .device {
+  /* width: 300px; */
+  margin: 0;
+  display: inline-table;
+  vertical-align: top;
+}
+
+/*
+.lands-list .land .control {
+
+}
+.lands-list .land .land-image {
+  width: 160px;
+  height: 160px;
+  padding: 0;
+  text-align: center;
+  border: 3px none;
+}
+
+.lands-list .land .land-image img {
+  border: none;
+  height: 160px;
+  width: 160px;
+}
+ */
+
+/* ================================= */
+.YandexMap {
+  position: relative;
+  cursor: help;
+  overflow: hidden;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgb(204, 204, 204);
+  border-image: initial;
+}
+.mapTitle {
+  position: absolute;
+  z-index: 1000;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 0px 5px;
+  display: none;
+  padding: 5px 20px;
+  border-radius: 5px;
+  background: rgb(255, 255, 255);
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgb(204, 204, 204);
+  border-image: initial;
+}
+/* ================================= */
+.modal-dialog button.close {
+  font-family: sans-serif;
+}
+
+div.grid-view td > p {
+  margin: 0 0 3px !important;
+  line-height: 1.1em;
+}
+
+/* DeviceBlock */
+.grid-view .device, .list-view .device {
+  border: 1px solid #999999;
+  border-radius: 3%;
+  padding: 2px 5px 2px 5px;
+}
+
+.grid-view .device-info, .list-view .device-info {
+  white-space: nowrap;
+}
+
+.grid-view .device-value, .list-view .device-value {
+  white-space: nowrap;
+  font-family: Arial, Helvetica, Verdana, Tahoma, sans-serif !important;
+  font-weight: normal;
+  font-size: 13px;
+}
+
+.grid-view .device-value-lg, .list-view .device-value-lg {
+  white-space: nowrap;
+  font-family: Arial, Helvetica, Verdana, Tahoma, sans-serif !important;
+  font-weight: normal;
+  font-size: 16px;
+}
+
+.grid-view .device-value > span:nth-child(1), .list-view .device-value > span:nth-child(1) {
+  color: #cccccc;
+  background-color: #ffffff;
+}
+.grid-view .device-value > span:nth-child(2), .list-view .device-value > span:nth-child(2) {
+  color: #000000;
+  background-color: #ffffff;
+}
+
+.grid-view .device-value > span:nth-child(3), .list-view .device-value > span:nth-child(3) {
+  color: #000000;
+  background-color: #ffffff;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 0 1px 0 1px;
+}
+
+.grid-view .device-value > span:nth-child(4), .list-view .device-value > span:nth-child(4) {
+  color: red;
+  background-color: #ffffff;
+}
+
+/* Structure tree classes*/
+.objStructureStructure {
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.objStructureLand {
+
+}
+
+.objStructureUser {
+
+}
+
+.objStructureDevice {
+
+}
+
+/* Ruble pseudo symbol */
+span.ruble {
+  text-transform: uppercase;
+}
+
+span.line-through {
+  text-decoration: line-through;
+  font-size: 0.9em;
+}
+
+span.dot {
+  position: absolute;
+  text-indent: -1000em;
+}
+
+/* AdminLTE my addons */
+.text-white {
+  color: #ffffff !important;
+}
+
+.text-large {
+  font-size: 150%;
+}
+
+div.box-header[data-widget="collapse"],
+.box-title[data-widget="collapse"] {
+  cursor: pointer;
+}
+
+
+.box-header > .box-title.h4 {
+  font-size: 18px;
+}
+
+.box-header > .box-title.h5 {
+  font-size: 14px;
+}
+
+.box-header > .box-title.h6 {
+  font-size: 12px;
+}
+
+.small-box .progress {
+  background: rgba(0, 0, 0, 0.2);
+  margin: 5px -10px 5px -10px;
+  height: 2px;
+}
+
+.small-box .progress,
+.info-box .progress .progress-bar {
+  border-radius: 0;
+}
+
+.small-box .progress .progress-bar {
+  background: #ffffff;
+}
+.small-box .progress-description {
+  white-space: initial;
+  min-height: 40px;
+}
+
+a:hover, a:active, a:focus {
+  color: initial;
+}
